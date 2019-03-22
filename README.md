@@ -1,2 +1,4 @@
 # codewars-katas
-My code challenge solutions
+This repo contains my code challenge solutions for codewars.com.
+
+
