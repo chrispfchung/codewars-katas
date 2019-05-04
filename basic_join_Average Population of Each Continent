@@ -1,0 +1,7 @@
+#https://www.hackerrank.com/challenges/average-population-of-each-continent/problem
+
+#Find the average population of continents by JOINING two tables
+
+SELECT COUNTRY.continent, FLOOR(AVG(CITY.Population))
+FROM CITY JOIN COUNTRY ON CITY.CountryCode = COUNTRY.Code
+GROUP BY COUNTRY.continent;
