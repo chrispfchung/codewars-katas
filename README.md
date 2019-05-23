@@ -1,5 +1,5 @@
 # codewars-katas / hackerrank
-This repo contains my code challenge solutions for codewars (python) and hackerrank (sql).
+This repo contains my code challenge solutions for codewars (python) leetcode (python),hackerrank (sql).
 
 It's great to polish coding skills every day.
 
