@@ -1,0 +1,9 @@
+#https://www.hackerrank.com/challenges/earnings-of-employees/problem
+
+SELECT salary*months as earnings, count(employee_id)
+FROM employee
+GROUP BY 1 ORDER BY earnings desc
+LIMIT 1;
+
+#Groups by 1 SELECT column from the query
+#Without limit 1, query will return all results

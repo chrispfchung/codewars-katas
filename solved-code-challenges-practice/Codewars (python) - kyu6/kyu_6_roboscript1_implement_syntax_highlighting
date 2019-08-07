@@ -1,0 +1,72 @@
+#https://www.codewars.com/kata/roboscript-number-1-implement-syntax-highlighting/train/python
+
+def highlight(code):
+    tag_list = []
+    for i in range(len(code)):
+        
+        #F
+        if code[i] == 'F':
+            F_list = []
+            F_list.append(code[i])
+            while code[i+1] == 'F':
+                for j in range(i+1, len(code)):
+                    F_list.append(code[j])
+
+                if code[j] != 'F':
+                    break
+                
+                    F_list = ''.join(F_list)
+                    colorcode = 'pink'
+                    tag = '<span' + ' ' + 'style="color: ' + colorcode + '">' + F_list + '</span>'
+                    tag_list.append(tag)
+        
+        #L
+        if code[i] == 'L':
+            F_list = []
+            F_list.append(code[i])
+            while code[i+1] == 'L':
+                for j in range(i+1, len(code)):
+                    F_list.append(code[j])
+
+                if code[j] != 'L':
+                    break
+                
+                    F_list = ''.join(F_list)
+                    colorcode = 'pink'
+                    tag = '<span' + ' ' + 'style="color: ' + colorcode + '">' + F_list + '</span>'
+                    tag_list.append(tag)
+            
+        #R
+        if code[i] == 'R':
+            F_list = []
+            F_list.append(code[i])
+            while code[i+1] == 'R':
+                for j in range(i+1, len(code)):
+                    F_list.append(code[j])
+
+                if code[j] != 'R':
+                    break
+                
+                    F_list = ''.join(F_list)
+                    colorcode = 'pink'
+                    tag = '<span' + ' ' + 'style="color: ' + colorcode + '">' + F_list + '</span>'
+                    tag_list.append(tag)
+    
+        #0-9
+        if code[i].isdigit():
+            F_list = []
+            F_list.append(code[i])
+            while code[i+1].isdigit():
+                for j in range(i+1, len(code)):
+                    F_list.append(code[j])
+
+                if not code[j].isdigit():
+                    break
+                
+                    F_list = ''.join(F_list)
+                    colorcode = 'pink'
+                    tag = '<span' + ' ' + 'style="color: ' + colorcode + '">' + F_list + '</span>'
+                    tag_list.append(tag)
+
+    tag_list = ''.join(tag_list)
+    return tag_list
